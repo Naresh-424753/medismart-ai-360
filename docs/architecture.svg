@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1180" font-family="Inter,Segoe UI,Arial,sans-serif"><defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2563eb"/></marker></defs><rect width="1600" height="1180" fill="#f8fafc"/>
+<text x="800" y="42" text-anchor="middle" font-size="28" font-weight="800" fill="#0a1d44">MediSmart AI 360 — System Architecture</text>
+<text x="800" y="68" text-anchor="middle" font-size="14" fill="#475569">As built: one FastAPI service (modular routers) + MongoDB + React. Not a microservice mesh.</text>
+<rect x="20" y="90" width="1560" height="110" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+<rect x="20" y="90" width="46" height="110" rx="14" fill="#2563eb"/>
+<text transform="translate(50,145.0) rotate(-90)" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" letter-spacing="2">USERS</text>
+<rect x="84.0" y="112" width="198.85714285714286" height="66" rx="10" fill="#fff" stroke="#93c5fd" stroke-width="1.5"/>
+<text x="183.42857142857144" y="150.0" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Patient</text>
+<rect x="294.8571428571429" y="112" width="198.85714285714286" height="66" rx="10" fill="#fff" stroke="#93c5fd" stroke-width="1.5"/>
+<text x="394.28571428571433" y="150.0" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Doctor</text>
+<rect x="505.7142857142857" y="112" width="198.85714285714286" height="66" rx="10" fill="#fff" stroke="#93c5fd" stroke-width="1.5"/>
+<text x="605.1428571428571" y="150.0" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Hospital</text>
+<rect x="716.5714285714286" y="112" width="198.85714285714286" height="66" rx="10" fill="#fff" stroke="#93c5fd" stroke-width="1.5"/>
+<text x="816.0" y="141.0" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Lab / Pharmacy</text>
+<text x="816.0" y="159.0" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Blood bank</text>
+<rect x="927.4285714285714" y="112" width="198.85714285714286" height="66" rx="10" fill="#fff" stroke="#93c5fd" stroke-width="1.5"/>
+<text x="1026.857142857143" y="150.0" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Ambulance</text>
+<rect x="1138.2857142857142" y="112" width="198.85714285714286" height="66" rx="10" fill="#fff" stroke="#93c5fd" stroke-width="1.5"/>
+<text x="1237.7142857142856" y="150.0" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Family member</text>
+<rect x="1349.142857142857" y="112" width="198.85714285714286" height="66" rx="10" fill="#fff" stroke="#93c5fd" stroke-width="1.5"/>
+<text x="1448.5714285714284" y="150.0" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Admin</text>
+<rect x="20" y="215" width="1560" height="150" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+<rect x="20" y="215" width="46" height="150" rx="14" fill="#16a34a"/>
+<text transform="translate(50,290.0) rotate(-90)" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" letter-spacing="2">FRONTEND</text>
+<rect x="84.0" y="235" width="198.85714285714286" height="58" rx="10" fill="#fff" stroke="#86efac" stroke-width="1.5"/>
+<text x="183.42857142857144" y="260.0" text-anchor="middle" font-size="15" font-weight="500" fill="#0f172a">Dashboard</text>
+<text x="183.42857142857144" y="278.0" text-anchor="middle" font-size="12" fill="#475569">vitals · analytics</text>
+<rect x="294.8571428571429" y="235" width="198.85714285714286" height="58" rx="10" fill="#fff" stroke="#86efac" stroke-width="1.5"/>
+<text x="394.28571428571433" y="260.0" text-anchor="middle" font-size="15" font-weight="500" fill="#0f172a">AI Diagnosis</text>
+<text x="394.28571428571433" y="278.0" text-anchor="middle" font-size="12" fill="#475569">risk · symptoms</text>
+<rect x="505.7142857142857" y="235" width="198.85714285714286" height="58" rx="10" fill="#fff" stroke="#86efac" stroke-width="1.5"/>
+<text x="605.1428571428571" y="269.0" text-anchor="middle" font-size="15" font-weight="500" fill="#0f172a">Reports + Image AI</text>
+<rect x="716.5714285714286" y="235" width="198.85714285714286" height="58" rx="10" fill="#fff" stroke="#86efac" stroke-width="1.5"/>
+<text x="816.0" y="260.0" text-anchor="middle" font-size="15" font-weight="500" fill="#0f172a">Assistant + Voice</text>
+<text x="816.0" y="278.0" text-anchor="middle" font-size="12" fill="#475569">10 languages</text>
+<rect x="927.4285714285714" y="235" width="198.85714285714286" height="58" rx="10" fill="#fff" stroke="#86efac" stroke-width="1.5"/>
+<text x="1026.857142857143" y="260.0" text-anchor="middle" font-size="15" font-weight="500" fill="#0f172a">Video Call</text>
+<text x="1026.857142857143" y="278.0" text-anchor="middle" font-size="12" fill="#475569">WebRTC</text>
+<rect x="1138.2857142857142" y="235" width="198.85714285714286" height="58" rx="10" fill="#fff" stroke="#86efac" stroke-width="1.5"/>
+<text x="1237.7142857142856" y="260.0" text-anchor="middle" font-size="15" font-weight="500" fill="#0f172a">Wearables</text>
+<text x="1237.7142857142856" y="278.0" text-anchor="middle" font-size="12" fill="#475569">Rx Scanner</text>
+<rect x="1349.142857142857" y="235" width="198.85714285714286" height="58" rx="10" fill="#fff" stroke="#86efac" stroke-width="1.5"/>
+<text x="1448.5714285714284" y="260.0" text-anchor="middle" font-size="15" font-weight="500" fill="#0f172a">Record Security</text>
+<text x="1448.5714285714284" y="278.0" text-anchor="middle" font-size="12" fill="#475569">ledger view</text>
+<text x="84" y="322" font-size="13" fill="#166534">React 18 · Tailwind · Recharts · Web Speech API (STT/TTS) · browser WebRTC · role-based navigation (patient, doctor, hospital, lab, pharmacy, blood bank, ambulance, family, admin)</text>
+<text x="84" y="344" font-size="13" fill="#166534">Public pages (no login): /kiosk health kiosk · /card public emergency card</text>
+<rect x="20" y="380" width="1560" height="100" rx="14" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+<rect x="20" y="380" width="46" height="100" rx="14" fill="#ea580c"/>
+<text transform="translate(50,430.0) rotate(-90)" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" letter-spacing="2">API</text>
+<rect x="84.0" y="402" width="283.2" height="62" rx="10" fill="#fff" stroke="#fdba74" stroke-width="1.5"/>
+<text x="225.6" y="429.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">FastAPI gateway</text>
+<text x="225.6" y="447.0" text-anchor="middle" font-size="12" fill="#475569">REST + OpenAPI</text>
+<rect x="379.2" y="402" width="283.2" height="62" rx="10" fill="#fff" stroke="#fdba74" stroke-width="1.5"/>
+<text x="520.8" y="429.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Auth</text>
+<text x="520.8" y="447.0" text-anchor="middle" font-size="12" fill="#475569">JWT · OTP 2FA · RBAC</text>
+<rect x="674.4" y="402" width="283.2" height="62" rx="10" fill="#fff" stroke="#fdba74" stroke-width="1.5"/>
+<text x="816.0" y="429.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Rate limiting</text>
+<text x="816.0" y="447.0" text-anchor="middle" font-size="12" fill="#475569">+ audit log</text>
+<rect x="969.5999999999999" y="402" width="283.2" height="62" rx="10" fill="#fff" stroke="#fdba74" stroke-width="1.5"/>
+<text x="1111.1999999999998" y="429.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">WebSocket /vitals/ws</text>
+<text x="1111.1999999999998" y="447.0" text-anchor="middle" font-size="12" fill="#475569">live vitals</text>
+<rect x="1264.8" y="402" width="283.2" height="62" rx="10" fill="#fff" stroke="#fdba74" stroke-width="1.5"/>
+<text x="1406.3999999999999" y="429.0" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">WebSocket /telemedicine/ws</text>
+<text x="1406.3999999999999" y="447.0" text-anchor="middle" font-size="12" fill="#475569">WebRTC signaling</text>
+<rect x="20" y="495" width="1560" height="260" rx="14" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1.5"/>
+<rect x="20" y="495" width="46" height="260" rx="14" fill="#7c3aed"/>
+<text transform="translate(50,625.0) rotate(-90)" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" letter-spacing="2">BACKEND MODULES</text>
+<rect x="84.0" y="515" width="283.2" height="72" rx="10" fill="#fff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="225.6" y="547.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Patient & Profile</text>
+<text x="225.6" y="565.0" text-anchor="middle" font-size="12" fill="#475569">health ID · consents
+encrypted documents</text>
+<rect x="379.2" y="515" width="283.2" height="72" rx="10" fill="#fff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="520.8" y="547.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Reports</text>
+<text x="520.8" y="565.0" text-anchor="middle" font-size="12" fill="#475569">OCR · analyzer
+lab trends</text>
+<rect x="674.4" y="515" width="283.2" height="72" rx="10" fill="#fff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="816.0" y="547.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Medicines</text>
+<text x="816.0" y="565.0" text-anchor="middle" font-size="12" fill="#475569">reminders · interactions
+stock · orders</text>
+<rect x="969.5999999999999" y="515" width="283.2" height="72" rx="10" fill="#fff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="1111.1999999999998" y="547.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Appointments</text>
+<text x="1111.1999999999998" y="565.0" text-anchor="middle" font-size="12" fill="#475569">doctors · notes
+follow-ups</text>
+<rect x="1264.8" y="515" width="283.2" height="72" rx="10" fill="#fff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="1406.3999999999999" y="547.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Hospital ops</text>
+<text x="1406.3999999999999" y="565.0" text-anchor="middle" font-size="12" fill="#475569">beds · OT · billing
+queue · inventory</text>
+<rect x="84.0" y="600" width="283.2" height="72" rx="10" fill="#fff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="225.6" y="632.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">AI engine</text>
+<text x="225.6" y="650.0" text-anchor="middle" font-size="12" fill="#475569">9 risk models · symptom checker
+multi-disease score · digital twin</text>
+<rect x="379.2" y="600" width="283.2" height="72" rx="10" fill="#fff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="520.8" y="632.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Image AI</text>
+<text x="520.8" y="650.0" text-anchor="middle" font-size="12" fill="#475569">OpenCV analysis · optional ONNX
+X-ray · MRI · skin · retina</text>
+<rect x="674.4" y="600" width="283.2" height="72" rx="10" fill="#fff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="816.0" y="632.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Prescription OCR</text>
+<text x="816.0" y="650.0" text-anchor="middle" font-size="12" fill="#475569">OpenCV + Tesseract + parser
+verify BEFORE reminders</text>
+<rect x="969.5999999999999" y="600" width="283.2" height="72" rx="10" fill="#fff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="1111.1999999999998" y="632.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Assistant</text>
+<text x="1111.1999999999998" y="650.0" text-anchor="middle" font-size="12" fill="#475569">rules (en/hi) · optional LLM
+emergency detection</text>
+<rect x="1264.8" y="600" width="283.2" height="72" rx="10" fill="#fff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="1406.3999999999999" y="632.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Vitals / IoT</text>
+<text x="1406.3999999999999" y="650.0" text-anchor="middle" font-size="12" fill="#475569">alert engine · fall detection
+wearable ingest</text>
+<rect x="84.0" y="685" width="283.2" height="56" rx="10" fill="#fff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="225.6" y="709.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Telemedicine</text>
+<text x="225.6" y="727.0" text-anchor="middle" font-size="12" fill="#475569">call sessions · TURN config</text>
+<rect x="379.2" y="685" width="283.2" height="56" rx="10" fill="#fff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="520.8" y="709.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Record ledger</text>
+<text x="520.8" y="727.0" text-anchor="middle" font-size="12" fill="#475569">hash chain · Merkle anchor</text>
+<rect x="674.4" y="685" width="283.2" height="56" rx="10" fill="#fff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="816.0" y="709.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Notifications</text>
+<text x="816.0" y="727.0" text-anchor="middle" font-size="12" fill="#475569">scheduler · email/SMS/WA</text>
+<rect x="969.5999999999999" y="685" width="283.2" height="56" rx="10" fill="#fff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="1111.1999999999998" y="709.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Emergency</text>
+<text x="1111.1999999999998" y="727.0" text-anchor="middle" font-size="12" fill="#475569">SOS · nearby hospitals</text>
+<rect x="1264.8" y="685" width="283.2" height="56" rx="10" fill="#fff" stroke="#c4b5fd" stroke-width="1.5"/>
+<text x="1406.3999999999999" y="709.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Messaging</text>
+<text x="1406.3999999999999" y="727.0" text-anchor="middle" font-size="12" fill="#475569">doctor–patient chat</text>
+<rect x="20" y="770" width="1560" height="120" rx="14" fill="#fefce8" stroke="#fde68a" stroke-width="1.5"/>
+<rect x="20" y="770" width="46" height="120" rx="14" fill="#ca8a04"/>
+<text transform="translate(50,830.0) rotate(-90)" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" letter-spacing="2">DATA</text>
+<rect x="84.0" y="792" width="357.0" height="72" rx="10" fill="#fff" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="262.5" y="824.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">MongoDB</text>
+<text x="262.5" y="842.0" text-anchor="middle" font-size="12" fill="#475569">users · patients · vitals · reports
+appointments · medicines · audit</text>
+<rect x="453.0" y="792" width="357.0" height="72" rx="10" fill="#fff" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="631.5" y="824.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Encrypted file store</text>
+<text x="631.5" y="842.0" text-anchor="middle" font-size="12" fill="#475569">documents + prescription images
+Fernet (DATA_KEY)</text>
+<rect x="822.0" y="792" width="357.0" height="72" rx="10" fill="#fff" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="1000.5" y="824.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Ledger collection</text>
+<text x="1000.5" y="842.0" text-anchor="middle" font-size="12" fill="#475569">per-patient SHA-256 chain
+fingerprints only, no medical data</text>
+<rect x="1191.0" y="792" width="357.0" height="72" rx="10" fill="#fff" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="1369.5" y="824.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">ML artifacts</text>
+<text x="1369.5" y="842.0" text-anchor="middle" font-size="12" fill="#475569">trained risk models
+optional ONNX image models</text>
+<rect x="20" y="905" width="1560" height="130" rx="14" fill="#ecfeff" stroke="#a5f3fc" stroke-width="1.5"/>
+<rect x="20" y="905" width="46" height="130" rx="14" fill="#0891b2"/>
+<text transform="translate(50,970.0) rotate(-90)" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" letter-spacing="2">EDGE / DEVICES</text>
+<rect x="84.0" y="927" width="357.0" height="72" rx="10" fill="#fff" stroke="#67e8f9" stroke-width="1.5"/>
+<text x="262.5" y="959.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">ESP32 + sensors</text>
+<text x="262.5" y="977.0" text-anchor="middle" font-size="12" fill="#475569">HR · SpO2 · temp · ECG
+Wi-Fi → /vitals/ingest</text>
+<rect x="453.0" y="927" width="357.0" height="72" rx="10" fill="#fff" stroke="#67e8f9" stroke-width="1.5"/>
+<text x="631.5" y="959.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Phone health store</text>
+<text x="631.5" y="977.0" text-anchor="middle" font-size="12" fill="#475569">Health Connect / HealthKit
+bridge → /wearables/ingest</text>
+<rect x="822.0" y="927" width="357.0" height="72" rx="10" fill="#fff" stroke="#67e8f9" stroke-width="1.5"/>
+<text x="1000.5" y="959.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Apple Health export</text>
+<text x="1000.5" y="977.0" text-anchor="middle" font-size="12" fill="#475569">export.zip upload
+→ /wearables/import</text>
+<rect x="1191.0" y="927" width="357.0" height="72" rx="10" fill="#fff" stroke="#67e8f9" stroke-width="1.5"/>
+<text x="1369.5" y="959.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Browser</text>
+<text x="1369.5" y="977.0" text-anchor="middle" font-size="12" fill="#475569">camera · mic · GPS
+speech</text>
+<rect x="20" y="1050" width="1560" height="100" rx="14" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="20" y="1050" width="46" height="100" rx="14" fill="#475569"/>
+<text transform="translate(50,1100.0) rotate(-90)" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" letter-spacing="2">EXTERNAL</text>
+<rect x="84.0" y="1072" width="357.0" height="56" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="262.5" y="1096.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">LLM API (optional)</text>
+<text x="262.5" y="1114.0" text-anchor="middle" font-size="12" fill="#475569">regional-language answers</text>
+<rect x="453.0" y="1072" width="357.0" height="56" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="631.5" y="1096.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">SMTP / SMS / WhatsApp</text>
+<text x="631.5" y="1114.0" text-anchor="middle" font-size="12" fill="#475569">optional providers</text>
+<rect x="822.0" y="1072" width="357.0" height="56" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="1000.5" y="1096.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">Maps / hospital data</text>
+<text x="1000.5" y="1114.0" text-anchor="middle" font-size="12" fill="#475569">optional keys</text>
+<rect x="1191.0" y="1072" width="357.0" height="56" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="1369.5" y="1096.0" text-anchor="middle" font-size="14" font-weight="500" fill="#0f172a">STUN / TURN</text>
+<text x="1369.5" y="1114.0" text-anchor="middle" font-size="12" fill="#475569">NAT traversal for calls</text>
+<line x1="300" y1="180" x2="300" y2="214" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a)" />
+<line x1="300" y1="365" x2="300" y2="401" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a)" />
+<line x1="300" y1="466" x2="300" y2="494" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a)" />
+<line x1="800" y1="180" x2="800" y2="214" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a)" />
+<line x1="800" y1="365" x2="800" y2="401" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a)" />
+<line x1="800" y1="466" x2="800" y2="494" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a)" />
+<line x1="1300" y1="180" x2="1300" y2="214" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a)" />
+<line x1="1300" y1="365" x2="1300" y2="401" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a)" />
+<line x1="1300" y1="466" x2="1300" y2="494" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a)" />
+<line x1="800" y1="756" x2="800" y2="769" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a)" />
+<line x1="800" y1="892" x2="800" y2="926" stroke="#0891b2" stroke-width="2.5" marker-end="url(#a)" />
+<line x1="800" y1="1036" x2="800" y2="1070" stroke="#64748b" stroke-width="2.5" marker-end="url(#a)" stroke-dasharray="6 4"/>
+<text x="810" y="1162" font-size="13" fill="#475569">Security: JWT + RBAC on every route · consent-gated access · every third-party read logged to the ledger · DEV_MODE must be 0 in production</text>
+</svg>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MediSmart AI 360 - System Architecture</title>
+<style>
+:root{--bg:#f4f7fb;--ink:#0f172a;--mut:#64748b;--card:#fff;--line:#d7e0ee;--blue:#2563eb;--teal:#0d9488;--amber:#d97706;--vio:#7c3aed;--red:#dc2626;--navy:#0a1d44}
+@media(prefers-color-scheme:dark){:root{--bg:#0b1220;--ink:#e5ecf6;--mut:#94a3b8;--card:#131c2e;--line:#27344d}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 Inter,system-ui,sans-serif}
+.w{max-width:1200px;margin:0 auto;padding:24px 16px 40px}
+h1{margin:0;font-size:26px}h1+p{color:var(--mut);margin:4px 0 20px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:20px}
+.flow b{background:var(--navy);color:#fff;border-radius:999px;padding:6px 14px;font-weight:600;font-size:13px}.flow i{color:var(--mut);font-style:normal}
+.stack{display:grid;grid-template-columns:1fr 70px;gap:12px}
+.layers{display:grid;gap:10px}
+.layer{display:grid;grid-template-columns:130px 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+.layer>h2{margin:0;padding:12px;font-size:13px;color:#fff;display:flex;align-items:center}
+.items{display:flex;flex-wrap:wrap;gap:8px;padding:12px}
+.chip{border:1px solid var(--line);border-radius:10px;padding:6px 10px;font-size:12.5px;background:var(--bg)}
+.chip small{display:block;color:var(--mut);font-size:11px}
+.chip.w2{border-style:dashed}
+.sec{writing-mode:vertical-rl;text-orientation:mixed;display:flex;align-items:center;justify-content:center;border-radius:14px;background:var(--navy);color:#fff;font-weight:600;letter-spacing:.04em;padding:10px;text-align:center}
+.arrow{text-align:center;color:var(--mut);font-size:12px;margin:-4px 0}
+.legend{margin-top:20px;display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.legend div{border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--card);font-size:13px}.legend b{display:block;margin-bottom:4px}
+@media(max-width:700px){.layer{grid-template-columns:1fr}.stack{grid-template-columns:1fr}.sec{writing-mode:horizontal-tb}}
+</style></head><body><div class="w">
+<h1>MediSmart AI 360: system architecture</h1>
+<p>Layered view of what is built in this repository. Dashed chips need your own keys, models or hardware to be fully live.</p>
+<div class="flow"><b>Sense</b><i>→</i><b>Ingest &amp; validate</b><i>→</i><b>Rules + ML inference</b><i>→</i><b>Alert / explain</b><i>→</i><b>Clinician verifies</b><i>→</i><b>Treat &amp; follow up</b></div>
+
+<div class="stack"><div class="layers">
+
+<section class="layer"><h2 style="background:var(--blue)">1 · Applications (React + Tailwind + Recharts)</h2><div class="items">
+<span class="chip">Patient dashboard</span><span class="chip">Doctor portal</span><span class="chip">Hospital ops</span><span class="chip">Lab</span><span class="chip">Pharmacist (Rx verify)</span><span class="chip">Blood bank</span><span class="chip">Ambulance</span><span class="chip">Family</span><span class="chip">Admin</span><span class="chip">Public kiosk / emergency card</span><span class="chip">Video call (WebRTC)</span><span class="chip">Voice navigator (10 languages)</span></div></section>
+<div class="arrow">HTTPS REST · WebSocket (live vitals) · WebSocket (WebRTC signaling)</div>
+
+<section class="layer"><h2 style="background:var(--navy)">2 · API gateway (FastAPI)</h2><div class="items">
+<span class="chip">CORS</span><span class="chip">Per-route rate limits</span><span class="chip">JWT auth</span><span class="chip">Role guards (require_roles)</span><span class="chip">Consent-based record access (access.py)</span><span class="chip">Audit log</span></div></section>
+<div class="arrow">▼</div>
+
+<section class="layer"><h2 style="background:var(--teal)">3 · Domain services (routers)</h2><div class="items">
+<span class="chip">auth + OTP / 2FA</span><span class="chip">patients &amp; documents</span><span class="chip">vitals</span><span class="chip">wearables</span><span class="chip">reports</span><span class="chip">ai (risk, image)</span><span class="chip">chat + voice</span><span class="chip">medicines &amp; pharmacy</span><span class="chip">rx_scan</span><span class="chip">doctors &amp; appointments</span><span class="chip">telemedicine</span><span class="chip">messaging</span><span class="chip">hospitals &amp; ops</span><span class="chip">labs</span><span class="chip">blood</span><span class="chip">emergency / SOS</span><span class="chip">wellness</span><span class="chip">analytics</span><span class="chip">ledger</span><span class="chip">admin</span></div></section>
+<div class="arrow">▼</div>
+
+<section class="layer"><h2 style="background:var(--vio)">4 · AI / ML engine</h2><div class="items">
+<span class="chip">9 risk models<small>synthetic-data demo</small></span>
+<span class="chip">Vitals rules + anomaly / trend<small>vitals_rules, analytics</small></span>
+<span class="chip">Report analyzer<small>CBC, LFT, KFT, lipid, thyroid…</small></span>
+<span class="chip">Image AI<small>OpenCV heuristics</small></span>
+<span class="chip w2">Trained ONNX image models<small>add your weights</small></span>
+<span class="chip">Prescription OCR<small>OpenCV + Tesseract + parser</small></span>
+<span class="chip">Symptom checker + chatbot<small>rule-based en/hi</small></span>
+<span class="chip w2">LLM answers (other languages)<small>needs LLM_API_KEY</small></span>
+<span class="chip">Emergency detection<small>10 languages</small></span></div></section>
+<div class="arrow">▼</div>
+
+<section class="layer"><h2 style="background:var(--amber)">5 · Data &amp; trust</h2><div class="items">
+<span class="chip">MongoDB (Motor)<small>mock in-memory for demo</small></span>
+<span class="chip">Fernet-encrypted documents</span>
+<span class="chip">Hash-chained ledger<small>Merkle anchor, tamper-evident</small></span>
+<span class="chip">Notifications<small>app · email · SMS · WhatsApp</small></span>
+<span class="chip">Scheduler<small>medicine &amp; appointment reminders</small></span></div></section>
+<div class="arrow">▲ readings in</div>
+
+<section class="layer"><h2 style="background:#475569">6 · Perception &amp; network</h2><div class="items">
+<span class="chip">ESP32<small>HR · SpO₂ · temperature · fall</small></span>
+<span class="chip">Phone as gateway<small>Health Connect / HealthKit</small></span>
+<span class="chip">Apple Health export import</span>
+<span class="chip">Manual vitals</span>
+<span class="chip">Report, image &amp; prescription uploads</span>
+<span class="chip">Microphone (voice)</span>
+<span class="chip w2">TURN relay<small>for strict NATs</small></span></div></section>
+
+</div><div class="sec">SECURITY &amp; PRIVACY · JWT · OTP/2FA · RBAC · consent · encryption · audit · ledger</div></div>
+
+<div class="legend">
+<div><b>Closed loop</b>Reading → validated and stored → rule/ML check → alert to patient and doctor → doctor reviews and prescribes → reminders and follow-ups.</div>
+<div><b>Human in the loop</b>Scanned prescriptions become reminders only after a doctor or pharmacist verifies. Risk and image outputs are screening support, not diagnoses.</div>
+<div><b>Deployment</b>Docker Compose: API (:8000), React (:5173), MongoDB. Modular routers can be split into separate services behind a gateway as load grows.</div>
+<div><b>Not a hospital-grade system</b>No FHIR/HL7 interface or PACS integration is built; HIPAA/DPDP compliance needs a formal review.</div>
+</div></div></body></html>

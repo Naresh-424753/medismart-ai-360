@@ -1,0 +1,26 @@
+# Render Blueprint: backend as a free Docker web service. Secrets are entered in the Render dashboard (sync: false), never stored here.
+services:
+  - type: web
+    name: medismart-api
+    runtime: docker
+    plan: free
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - { key: DEV_MODE, value: "0" }
+      - { key: MONGO_FALLBACK, value: "0" }
+      - { key: SEED_DEMO, value: "0" }
+      - { key: DB_NAME, value: medismart }
+      - { key: MONGO_URL, sync: false }        # MongoDB Atlas connection string
+      - { key: JWT_SECRET, generateValue: true }
+      - { key: DATA_KEY, sync: false }         # Fernet key, see DEPLOY.md
+      - { key: ADMIN_EMAIL, sync: false }
+      - { key: ADMIN_PASSWORD, sync: false }
+      - { key: CORS_ORIGINS, sync: false }     # your frontend URL, e.g. https://medismart.vercel.app
+      - { key: SMTP_HOST, value: smtp.gmail.com }
+      - { key: SMTP_PORT, value: "587" }
+      - { key: SMTP_USER, sync: false }
+      - { key: SMTP_PASS, sync: false }
+      - { key: SMTP_FROM, sync: false }
+      - { key: GCS_BUCKET, sync: false }       # optional but needed for uploads: the free disk is wiped on every restart

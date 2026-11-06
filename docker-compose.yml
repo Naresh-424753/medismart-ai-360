@@ -1,0 +1,27 @@
+# Needs a .env file next to this one (copy .env.example): MONGO_USER and MONGO_PASSWORD. Nothing secret is stored here.
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER:?set MONGO_USER in .env}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD:?set MONGO_PASSWORD in .env}
+    volumes: [mongo_data:/data/db]
+    # not published to the host: only the backend can reach the database
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    env_file: ./backend/.env
+    environment:
+      MONGO_URL: mongodb://${MONGO_USER}:${MONGO_PASSWORD}@mongo:27017/?authSource=admin
+      CORS_ORIGINS: http://localhost:5173
+    depends_on: [mongo]
+    ports: ["8000:8000"]
+    volumes: [uploads:/app/uploads]
+  frontend:
+    build:
+      context: ./frontend
+      args: { VITE_API_URL: http://localhost:8000 }
+    depends_on: [backend]
+    ports: ["5173:80"]
+volumes: { mongo_data: {}, uploads: {} }
