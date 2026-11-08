@@ -47,7 +47,8 @@ async def check_connection(db):
     try:
         await db.command("ping")
     except Exception as e:
-        raise RuntimeError(f"Cannot reach MongoDB ({type(e).__name__}). Check MONGO_URL in backend/.env, that mongod is running, and the username/password.") from e
+        detail = " ".join(str(e).split())[:300]  # server messages never contain the password
+        raise RuntimeError(f"Cannot reach MongoDB ({type(e).__name__}): {detail}. Check the MONGO_URL setting, that mongod / the Atlas cluster is reachable, the IP allow-list and the username/password.") from e
 
 
 INDEXES = [
